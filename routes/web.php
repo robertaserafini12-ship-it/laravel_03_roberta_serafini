@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 
-// Homepage
+// 1. Homepage
 Route::get('/', [ArticleController::class, 'homepage'])->name('homepage');
 
-// Indice Articoli
+// 2. Indice articoli
 Route::get('/articoli', [ArticleController::class, 'index'])->name('articles.index');
 
-// Dettaglio Articolo
+// 3. Dettaglio articolo
 Route::get('/articolo/{id}', [ArticleController::class, 'show'])->name('articles.show');
