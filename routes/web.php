@@ -1,10 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PublicController;
+use Illuminate\Support\Facades\Route;
 
 // 1. Homepage
-Route::get('/', [ArticleController::class, 'homepage'])->name('homepage');
+Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 // 2. Indice articoli
 Route::get('/articoli', [ArticleController::class, 'index'])->name('articles.index');
